@@ -1,103 +1,208 @@
-import Image from "next/image";
+import { ConceptCard } from "@/components/ui/ConceptCard";
+import { Header } from "@/components/ui/Header";
+import { Footer } from "@/components/ui/Footer";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const concepts = [
+    {
+      title: "🔄 Virtualization",
+      description: "Efficiently render large lists by only rendering visible items. Learn techniques to handle thousands of items with smooth performance.",
+      href: "/concepts/virtualization",
+      tags: ["Performance", "React", "Large Lists"],
+      status: "complete" as const
+    },
+    {
+      title: "🔃 Infinite Scroll",
+      description: "Load content continuously as users scroll. Master intersection observers and loading states for seamless user experiences.",
+      href: "/concepts/infinite-scroll", 
+      tags: ["UX", "Performance", "API"],
+      status: "complete" as const
+    },
+    {
+      title: "🔌 Data Fetching Strategies",
+      description: "Explore CSR, SSR, SSG, and ISR. Learn when to use each strategy and how to optimize data loading for your applications.",
+      href: "/concepts/data-fetching",
+      tags: ["Next.js", "Performance", "SEO"],
+      status: "complete" as const
+    },
+    {
+      title: "🏗️ State Management",
+      description: "From useState to Zustand, Redux, and Jotai. Compare different state management solutions and their use cases.",
+      href: "/concepts/state-management",
+      tags: ["React", "Architecture", "State"],
+      status: "draft" as const
+    },
+    {
+      title: "🧩 Component Architecture",
+      description: "Design scalable component systems. Learn composition patterns, prop drilling solutions, and component organization.",
+      href: "/concepts/component-architecture",
+      tags: ["React", "Architecture", "Design Patterns"],
+      status: "draft" as const
+    },
+    {
+      title: "⚡ Performance Optimization",
+      description: "Optimize bundle size, implement code splitting, and master Core Web Vitals for lightning-fast applications.",
+      href: "/concepts/performance",
+      tags: ["Performance", "Webpack", "Optimization"],
+      status: "in-progress" as const
+    }
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <Header />
+      
+      <main>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                Frontend{" "}
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+                  Mastering
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+                Master advanced frontend concepts with comprehensive guides and practical implementations. 
+                From virtualization to performance optimization, level up your development skills.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#concepts"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Explore Concepts
+                </a>
+                <a
+                  href="/implementations"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                >
+                  View Implementations
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Why Frontend Mastering?
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                More than just documentation - we provide working code examples, performance insights, 
+                and real-world implementations you can use in production.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📚</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                  Comprehensive Guides
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  In-depth explanations of complex frontend concepts with clear examples and use cases.
+                </p>
+              </div>
+
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                  Working Examples
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Every concept comes with production-ready code examples you can run and modify.
+                </p>
+              </div>
+
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🌟</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                  Open Source
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Community-driven project where developers can contribute and learn together.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Concepts Section */}
+        <section id="concepts" className="py-20 bg-white dark:bg-gray-950">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                Frontend Concepts
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Explore our growing collection of frontend concepts, from performance optimization 
+                to advanced React patterns.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {concepts.map((concept) => (
+                <ConceptCard key={concept.title} {...concept} />
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <a
+                href="https://github.com/your-username/frontend-mastering/issues"
+                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Request New Topic
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Contributing Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                Join the Community
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                Help us build the most comprehensive frontend resource. Contribute concepts, 
+                improve documentation, or share your implementations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/.github/CONTRIBUTING.md"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Contributing Guide
+                </a>
+                <a
+                  href="https://github.com/your-username/frontend-mastering"
+                  className="inline-flex items-center justify-center px-8 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
   );
 }
