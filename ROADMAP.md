@@ -116,8 +116,8 @@ Want to help shape the future of Frontend Mastering?
 
 1. **Star the Repository** ⭐
 2. **Read the [Contributing Guide](./.github/CONTRIBUTING.md)**
-3. **Pick an Issue** from [GitHub Issues](https://github.com/your-username/frontend-mastering/issues)
-4. **Join Discussions** on [GitHub Discussions](https://github.com/your-username/frontend-mastering/discussions)
+3. **Pick an Issue** from [GitHub Issues](https://github.com/NH-Rifat/frontend-mastering/issues)
+4. **Join Discussions** on [GitHub Discussions](https://github.com/NH-Rifat/frontend-mastering/discussions)
 5. **Spread the Word** 📢
 
 ---

@@ -59,7 +59,7 @@ frontend-mastering/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/frontend-mastering.git
+git clone https://github.com/NH-Rifat/frontend-mastering.git
 cd frontend-mastering
 
 # Install dependencies
@@ -109,7 +109,7 @@ We welcome contributions from the community! Here's how you can help:
 
 ### Getting Started
 1. Read our [Contributing Guide](./.github/CONTRIBUTING.md)
-2. Check [open issues](https://github.com/your-username/frontend-mastering/issues)
+2. Check [open issues](https://github.com/NH-Rifat/frontend-mastering/issues)
 3. Fork the repository
 4. Create a feature branch
 5. Submit a pull request
@@ -163,9 +163,9 @@ See our [Contributing Guide](./.github/CONTRIBUTING.md) for detailed instruction
 
 ## 📞 Support
 
-- 🐛 **Bug Reports**: [Create an issue](https://github.com/your-username/frontend-mastering/issues)
-- 💡 **Feature Requests**: [Discussion board](https://github.com/your-username/frontend-mastering/discussions)
-- 📧 **Questions**: Check [Discussions](https://github.com/your-username/frontend-mastering/discussions)
+- 🐛 **Bug Reports**: [Create an issue](https://github.com/NH-Rifat/frontend-mastering/issues)
+- 💡 **Feature Requests**: [Discussion board](https://github.com/NH-Rifat/frontend-mastering/discussions)
+- 📧 **Questions**: Check [Discussions](https://github.com/NH-Rifat/frontend-mastering/discussions)
 
 ## 📄 License
 

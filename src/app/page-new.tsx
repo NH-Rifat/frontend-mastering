@@ -1,5 +1,6 @@
 "use client";
 
+import { Header } from "@/components/ui";
 import { Footer } from "@/components/ui/Footer";
 import { ConceptCard } from "@/components/ui/ConceptCard";
 import { FadeIn, StaggerContainer, ScaleIn } from "@/components/animations";
@@ -7,7 +8,6 @@ import { concepts } from "@/data/concepts";
 import { heroStats, features } from "@/data/content";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Header } from "@/components/ui"; 
 
 export default function HomePage() {
   return (
