@@ -1,5 +1,96 @@
 @import 'tailwindcss';
 
+/* Elastic Smooth Scrolling Configuration */
+html,
+body {
+  scroll-behavior: auto; /* Disable default to use custom elastic scrolling */
+  scroll-padding-top: 80px; /* Account for fixed header */
+  overflow-x: hidden;
+}
+
+/* Enhanced smooth scrolling with elastic behavior */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Enhanced Custom scrollbar styling with elastic feel */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(156, 163, 175, 0.05);
+  border-radius: 6px;
+  margin: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #4338ca, #6d28d9, #7e22ce);
+  transform: scale(0.95);
+}
+
+/* Firefox scrollbar styling with elastic colors */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 rgba(156, 163, 175, 0.05);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+/* Momentum scrolling for mobile devices */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+/* Enhanced scroll snap for sections */
+.scroll-snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optimized transforms for better performance */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

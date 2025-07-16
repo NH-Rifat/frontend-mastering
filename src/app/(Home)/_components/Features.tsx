@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Features = () => {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
+    <section className="relative py-20  overflow-hidden">
       {/* Enhanced Background with Gradient Mesh */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/50 to-purple-50/50 dark:from-gray-950 dark:via-blue-950/30 dark:to-purple-950/30"></div>
@@ -114,30 +114,90 @@ const Features = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              {/* Subtitle Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 via-purple-50 to-cyan-50 dark:from-blue-950/30 dark:via-purple-950/30 dark:to-cyan-950/30 rounded-full border border-blue-200/50 dark:border-blue-700/30 mb-6"
+              >
+                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">
+                  🚀 Why Choose Frontend Mastering
+                </span>
+              </motion.div>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                <span className="text-gray-900 dark:text-gray-100">
+                  Transform Your
+                </span>
+                <br />
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                  Powerful Features
+                  Development Journey
                 </span>
               </h2>
 
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Discover the tools and resources that make learning frontend
-                development
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                We don't just teach code – we build
                 <span className="font-semibold text-purple-600 dark:text-purple-400">
                   {' '}
-                  efficient
-                </span>{' '}
-                and
+                  confident developers
+                </span>
+                . Our platform combines cutting-edge curriculum with real-world
+                projects, ensuring you master frontend development through
                 <span className="font-semibold text-blue-600 dark:text-blue-400">
                   {' '}
-                  enjoyable
+                  hands-on experience
                 </span>
+                , not just theory.
               </p>
+
+              {/* Key Value Points */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap justify-center gap-4 mt-8 text-sm"
+              >
+                {[
+                  {
+                    icon: '💡',
+                    text: 'Industry-Relevant Skills',
+                    color: 'text-blue-600 dark:text-blue-400',
+                  },
+                  {
+                    icon: '🎯',
+                    text: 'Project-Based Learning',
+                    color: 'text-purple-600 dark:text-purple-400',
+                  },
+                  {
+                    icon: '⚡',
+                    text: 'Career-Ready Portfolio',
+                    color: 'text-cyan-600 dark:text-cyan-400',
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    className="flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-200/50 dark:border-gray-700/50"
+                  >
+                    <span>{item.icon}</span>
+                    <span className={`font-medium ${item.color}`}>
+                      {item.text}
+                    </span>
+                  </motion.div>
+                ))}
+              </motion.div>
             </motion.div>
           </div>
         </FadeIn>
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4 gap-6 lg:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}

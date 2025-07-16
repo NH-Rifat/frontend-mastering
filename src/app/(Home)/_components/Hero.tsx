@@ -259,7 +259,7 @@ const Hero = () => {
                 </motion.span>
                 Welcome to Frontend Mastering
                 <motion.div
-                  className="w-2 h-2 bg-green-500 rounded-full"
+                  className="w-2 h-2 bg-cyan-500 rounded-full"
                   animate={{
                     opacity: [0.5, 1, 0.5],
                     scale: [0.8, 1.2, 0.8],

@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const FeaturedConcept = () => {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden">
+    <section className="relative py-20 overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 dark:from-gray-900 dark:via-indigo-950/20 dark:to-purple-950/20"></div>
@@ -92,37 +92,86 @@ const FeaturedConcept = () => {
             </motion.div>
 
             <motion.h2
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Master Frontend
+              <span className="text-gray-900 dark:text-gray-100">
+                Skip The Tutorial Hell.
               </span>
               <br />
-              <span className="text-gray-800 dark:text-gray-200">Concepts</span>
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                Build Real Projects
+              </span>
             </motion.h2>
 
             <motion.p
-              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Explore carefully curated topics that will
+              Stop watching endless tutorials and start building. Each concept
+              includes
               <span className="font-semibold text-indigo-600 dark:text-indigo-400">
                 {' '}
-                accelerate your learning
-              </span>{' '}
-              and
+                real-world projects
+              </span>
+              , practical examples, and the exact skills employers are looking
+              for.
               <span className="font-semibold text-purple-600 dark:text-purple-400">
                 {' '}
-                boost your career
+                No fluff, just results.
               </span>
             </motion.p>
+
+            {/* User Pain Points */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap justify-center gap-4 mt-8 text-sm"
+            >
+              {[
+                {
+                  icon: '❌',
+                  text: 'No More Tutorial Hell',
+                  description: 'Build instead of watching',
+                },
+                {
+                  icon: '🎯',
+                  text: 'Job-Ready Skills',
+                  description: 'What employers actually want',
+                },
+                {
+                  icon: '⚡',
+                  text: 'Fast Track Learning',
+                  description: 'Skip the overwhelm',
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="flex flex-col items-center gap-2 px-6 py-4 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-lg group transition-all duration-300 hover:shadow-xl"
+                >
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="font-semibold text-gray-900 dark:text-gray-100 group-hover:bg-gradient-to-r group-hover:from-indigo-600 group-hover:to-purple-600 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    {item.text}
+                  </span>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    {item.description}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </FadeIn>
 
@@ -309,7 +358,7 @@ const FeaturedConcept = () => {
                       {concept.description}
                     </p>
 
-                    {/* Course Stats */}
+                    {/* Concept Insights */}
                     <div className="mb-6 grid grid-cols-3 gap-3">
                       <motion.div
                         className="text-center p-3 rounded-xl"
@@ -335,10 +384,18 @@ const FeaturedConcept = () => {
                         whileHover={{ scale: 1.05 }}
                       >
                         <div className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                          {8 + index * 2}
+                          {index % 3 === 0
+                            ? '�'
+                            : index % 3 === 1
+                            ? '🔗'
+                            : '🧠'}
                         </div>
                         <div className="text-xs text-gray-500 dark:text-gray-400">
-                          Lessons
+                          {index % 3 === 0
+                            ? 'HTML/CSS'
+                            : index % 3 === 1
+                            ? 'JavaScript'
+                            : 'None'}
                         </div>
                       </motion.div>
 
@@ -366,10 +423,18 @@ const FeaturedConcept = () => {
                         whileHover={{ scale: 1.05 }}
                       >
                         <div className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                          {3 + index}h
+                          {index % 3 === 0
+                            ? '🛠️'
+                            : index % 3 === 1
+                            ? '💡'
+                            : '🎨'}
                         </div>
                         <div className="text-xs text-gray-500 dark:text-gray-400">
-                          Duration
+                          {index % 3 === 0
+                            ? 'Practical'
+                            : index % 3 === 1
+                            ? 'Concepts'
+                            : 'Creative'}
                         </div>
                       </motion.div>
 
@@ -408,10 +473,10 @@ const FeaturedConcept = () => {
                             }}
                           >
                             {index % 3 === 0
-                              ? '★★☆'
+                              ? '●●○'
                               : index % 3 === 1
-                              ? '★★★'
-                              : '★☆☆'}
+                              ? '●●●'
+                              : '●○○'}
                           </span>
                         </div>
                         <div className="text-xs text-gray-500 dark:text-gray-400">

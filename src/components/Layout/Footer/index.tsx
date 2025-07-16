@@ -10,7 +10,7 @@ export function Footer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white relative overflow-hidden"
+      className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white relative overflow-hidden py-8"
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
@@ -123,7 +123,7 @@ export function Footer() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+              <h3 className="text-lg font-semibold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                 Resources
               </h3>
               <ul className="space-y-3">

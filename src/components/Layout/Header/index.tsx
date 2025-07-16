@@ -37,29 +37,60 @@ export function Header() {
             className="relative"
           >
             <Link href="/" className="flex items-center space-x-3 group">
-              {/* Logo Icon with enhanced design */}
+              {/* Enhanced Logo Icon */}
               <div className="relative">
                 <motion.div
-                  className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
-                  whileHover={{ rotate: 5 }}
+                  className="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600  flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden"
+                  whileHover={{ rotate: 3, scale: 1.05 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 25 }}
                 >
-                  <span className="text-white font-bold text-base tracking-tight">
+                  {/* Animated background pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                  {/* Logo text with better styling */}
+                  <span className="text-white font-black  tracking-tighter relative z-10 drop-shadow-sm">
                     FM
                   </span>
+
+                  {/* Subtle inner glow */}
+                  <div className="absolute inset-1 rounded-xl bg-gradient-to-br from-white/20 to-transparent opacity-30"></div>
                 </motion.div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300"></div>
+
+                {/* Enhanced glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-600 opacity-0 group-hover:opacity-30 blur-lg transition-all duration-500 scale-110"></div>
+
+                {/* Floating particles effect */}
+                <motion.div
+                  className="absolute -top-1 -right-1 w-2 h-2 bg-purple-400 rounded-full opacity-0 group-hover:opacity-100"
+                  animate={{
+                    scale: [0, 1, 0],
+                    opacity: [0, 1, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: 0.5,
+                  }}
+                />
               </div>
 
-              {/* Brand Text */}
+              {/* Enhanced Brand Text */}
               <div className="flex flex-col">
-                <span className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:via-cyan-600 group-hover:to-blue-600 transition-all duration-500">
+                <motion.span
+                  className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent group-hover:from-cyan-600 group-hover:via-purple-600 group-hover:to-blue-600 transition-all duration-500"
+                  whileHover={{ letterSpacing: '0.02em' }}
+                  transition={{ duration: 0.3 }}
+                >
                   Frontend Mastering
-                </span>
-                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </motion.span>
+                <motion.span
+                  className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  initial={{ y: 5 }}
+                  whileHover={{ y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   Learn. Build. Master.
-                </span>
+                </motion.span>
               </div>
             </Link>
           </motion.div>
