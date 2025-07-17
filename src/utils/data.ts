@@ -1,0 +1,98 @@
+export const conceptsData = [
+  {
+    title: 'HTML Fundamentals',
+    description:
+      'Master the building blocks of web development with semantic HTML elements, accessibility features, and modern HTML5 standards.',
+    tags: ['HTML', 'Semantic', 'Accessibility', 'Web Standards'],
+    status: 'complete',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+    date: new Date('2024-01-15'),
+    readTime: 15,
+    difficulty: 'Beginner',
+    completionRate: 100,
+  },
+  {
+    title: 'CSS Grid & Flexbox',
+    description:
+      'Deep dive into modern CSS layout systems including Grid and Flexbox for responsive and maintainable layouts.',
+    tags: ['CSS', 'Grid', 'Flexbox', 'Layout', 'Responsive'],
+    status: 'complete',
+    href: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
+    date: new Date('2024-01-22'),
+    readTime: 25,
+    difficulty: 'Intermediate',
+    completionRate: 95,
+  },
+  {
+    title: 'JavaScript ES6+ Features',
+    description:
+      'Explore modern JavaScript features including arrow functions, destructuring, async/await, and modules.',
+    tags: ['JavaScript', 'ES6+', 'Modern JS', 'Functions'],
+    status: 'in-progress',
+    href: 'https://javascript.info/',
+    date: new Date('2024-02-01'),
+    readTime: 30,
+    difficulty: 'Intermediate',
+    completionRate: 75,
+  },
+  {
+    title: 'React Hooks Deep Dive',
+    description:
+      'Master React Hooks including useState, useEffect, useContext, and custom hooks for modern React development.',
+    tags: ['React', 'Hooks', 'State Management', 'Effects'],
+    status: 'in-progress',
+    href: 'https://react.dev/reference/react',
+    date: new Date('2024-02-10'),
+    readTime: 35,
+    difficulty: 'Advanced',
+    completionRate: 60,
+  },
+  {
+    title: 'TypeScript Fundamentals',
+    description:
+      'Learn TypeScript type system, interfaces, generics, and how to build type-safe applications.',
+    tags: ['TypeScript', 'Types', 'Interfaces', 'Type Safety'],
+    status: 'in-progress',
+    href: 'https://www.typescriptlang.org/docs/',
+    date: new Date('2024-02-18'),
+    readTime: 40,
+    difficulty: 'Intermediate',
+    completionRate: 45,
+  },
+  {
+    title: 'Next.js App Router',
+    description:
+      'Master the new App Router in Next.js 13+ with server components, streaming, and modern routing patterns.',
+    tags: ['Next.js', 'React', 'SSR', 'App Router', 'Server Components'],
+    status: 'draft',
+    href: 'https://nextjs.org/docs',
+    date: new Date('2024-02-25'),
+    readTime: 45,
+    difficulty: 'Advanced',
+    completionRate: 20,
+  },
+  {
+    title: 'Advanced CSS Animations',
+    description:
+      'Create smooth, performant animations using CSS transitions, keyframes, and advanced animation techniques.',
+    tags: ['CSS', 'Animations', 'Transitions', 'Performance'],
+    status: 'draft',
+    href: 'https://web.dev/animations/',
+    date: new Date('2024-03-05'),
+    readTime: 20,
+    difficulty: 'Intermediate',
+    completionRate: 10,
+  },
+  {
+    title: 'Web Performance Optimization',
+    description:
+      'Learn advanced techniques for optimizing web performance including lazy loading, code splitting, and Core Web Vitals.',
+    tags: ['Performance', 'Optimization', 'Web Vitals', 'Loading'],
+    status: 'draft',
+    href: 'https://web.dev/performance/',
+    date: new Date('2024-03-12'),
+    readTime: 50,
+    difficulty: 'Advanced',
+    completionRate: 5,
+  },
+];

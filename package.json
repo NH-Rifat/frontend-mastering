@@ -13,10 +13,14 @@
     "clean": "rm -rf .next out dist"
   },
   "dependencies": {
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "classnames": "^2.5.1",
     "framer-motion": "^12.23.5",
     "next": "15.4.1",
+    "prop-types": "^15.8.1",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
