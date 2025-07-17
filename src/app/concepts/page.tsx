@@ -9,13 +9,6 @@ import { ConceptCard } from './_components/ConceptCard';
 
 export default function ConceptsPage() {
   const totalConcepts = conceptsData.length;
-  const completedConcepts = conceptsData.filter(
-    (c) => c.status === 'complete'
-  ).length;
-  const inProgressConcepts = conceptsData.filter(
-    (c) => c.status === 'in-progress'
-  ).length;
-  const overallProgress = Math.round((completedConcepts / totalConcepts) * 100);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-blue-900/20 dark:to-indigo-900/30">
@@ -26,7 +19,7 @@ export default function ConceptsPage() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl dark:bg-blue-600/10"></div>
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl dark:bg-purple-600/10"></div>
 
-        <div className="relative container mx-auto px-4 py-16">
+        <div className="relative container py-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -68,33 +61,6 @@ export default function ConceptsPage() {
                   Total Concepts
                 </div>
               </div>
-
-              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md p-6 rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                  {completedConcepts}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                  Completed
-                </div>
-              </div>
-
-              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md p-6 rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
-                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
-                  {inProgressConcepts}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                  In Progress
-                </div>
-              </div>
-
-              <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md p-6 rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                  {overallProgress}%
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
-                  Overall Progress
-                </div>
-              </div>
             </motion.div>
 
             {/* Call to Action */}
@@ -132,7 +98,10 @@ export default function ConceptsPage() {
       </div>
 
       {/* Timeline Section */}
-      <div id="timeline" className="container mx-auto px-4 py-16">
+      <div
+        id="timeline"
+        className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] px-4 my-16"
+      >
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -148,11 +117,17 @@ export default function ConceptsPage() {
           </p>
         </motion.div>
 
-        <VerticalTimeline>
-          {conceptsData.map((concept, index) => (
-            <ConceptCard key={concept.title} concept={concept} index={index} />
-          ))}
-        </VerticalTimeline>
+        <div className="px-8">
+          <VerticalTimeline>
+            {conceptsData?.map((concept, index) => (
+              <ConceptCard
+                key={concept.title}
+                concept={concept}
+                index={index}
+              />
+            ))}
+          </VerticalTimeline>
+        </div>
       </div>
     </div>
   );
