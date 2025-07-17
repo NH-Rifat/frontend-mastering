@@ -13,6 +13,7 @@
     "clean": "rm -rf .next out dist"
   },
   "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@types/react-vertical-timeline-component": "^3.3.6",
     "classnames": "^2.5.1",
     "framer-motion": "^12.23.5",
@@ -20,6 +21,7 @@
     "prop-types": "^15.8.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-syntax-highlighter": "^15.6.1",
     "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {

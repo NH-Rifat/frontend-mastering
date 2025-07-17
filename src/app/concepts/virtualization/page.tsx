@@ -1,11 +1,10 @@
 'use client';
 
-const Virtualization = () => {
-  return (
-    <div className="">
-      <h1>Virtualization</h1>
-    </div>
-  );
+import { SplitScreenLayout } from './_components/SplitScreenLayout';
+import virtualizationData from './utils/data';
+
+const VirtualizationPage = () => {
+  return <SplitScreenLayout sections={virtualizationData} />;
 };
 
-export default Virtualization;
+export default VirtualizationPage;
