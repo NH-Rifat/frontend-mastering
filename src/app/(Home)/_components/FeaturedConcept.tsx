@@ -492,7 +492,7 @@ const FeaturedConcept = () => {
                     {/* CTA Button */}
                     <Link href={concept.href}>
                       <motion.button
-                        className="w-full py-3 px-6 text-sm font-semibold rounded-xl border-2 transition-all duration-300"
+                        className="w-full py-3 px-6 text-sm font-semibold rounded-xl border-2 transition-all duration-300 cursor-pointer"
                         style={{
                           borderColor:
                             index % 6 === 0
