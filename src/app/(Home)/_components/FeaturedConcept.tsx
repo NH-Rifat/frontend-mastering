@@ -1,4 +1,5 @@
 import { FadeIn, StaggerContainer } from '@/components/animations';
+import { LinkButton } from '@/components/common';
 import { concepts } from '@/data/concepts';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -604,59 +605,7 @@ const FeaturedConcept = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block"
-            >
-              <Link
-                href="/concepts"
-                className="group relative inline-flex items-center px-10 py-4 text-lg font-semibold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
-              >
-                {/* Button Background Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                {/* Button Content */}
-                <span className="relative z-10">Explore All Concepts</span>
-                <motion.svg
-                  className="relative z-10 ml-3 w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  animate={{ x: 0 }}
-                  whileHover={{ x: 4 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </motion.svg>
-
-                {/* Floating Particles on Hover */}
-                {[...Array(3)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-1 h-1 bg-white/60 rounded-full opacity-0 group-hover:opacity-100"
-                    style={{
-                      left: `${30 + i * 15}%`,
-                      top: `${30 + i * 10}%`,
-                    }}
-                    animate={{
-                      y: [0, -8, 0],
-                      opacity: [0, 1, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: i * 0.2,
-                    }}
-                  />
-                ))}
-              </Link>
-            </motion.div>
+            <LinkButton text="Explore All Concepts" href="/concepts" />
 
             {/* Additional Info */}
             <motion.p

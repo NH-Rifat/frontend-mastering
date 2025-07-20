@@ -1,7 +1,7 @@
 import { FadeIn, ScaleIn } from '@/components/animations';
+import { LinkButton } from '@/components/common';
 import { heroStats } from '@/data/content';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
@@ -289,52 +289,12 @@ const Hero = () => {
 
           <FadeIn delay={0.6}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <ScaleIn delay={0.8}>
-                <Link
-                  href="/concepts"
-                  className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-purple-600 hover:to-blue-600 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 transform relative overflow-hidden"
-                >
-                  Explore Concepts
-                  <motion.svg
-                    className="ml-2 w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    animate={{ x: 0 }}
-                    whileHover={{ x: 4 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </motion.svg>
-                </Link>
-              </ScaleIn>
-
-              <ScaleIn delay={1.0}>
-                <Link
-                  href="/implementations"
-                  className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-gray-700 dark:text-gray-200 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border-2 border-gray-200/50 dark:border-gray-600/50 rounded-2xl hover:bg-white dark:hover:bg-gray-700 hover:border-blue-300 dark:hover:border-blue-500 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 transform"
-                >
-                  View Code Examples
-                  <svg
-                    className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:rotate-12"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </Link>
-              </ScaleIn>
+              <LinkButton text="Explore Concepts" href="/concepts" />
+              <LinkButton
+                text="View Code Examples"
+                href="/concepts"
+                variant="secondary"
+              />
             </div>
           </FadeIn>
 

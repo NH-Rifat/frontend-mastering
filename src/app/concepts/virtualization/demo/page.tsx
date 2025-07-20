@@ -261,13 +261,13 @@ export default function VirtualizationDemo() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Try it on sandbox
+                Try in CodeSandbox
               </a>
               <a
                 href="/implementations"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 dark:text-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
-                start learning
+                Start learning
                 <svg
                   className="w-4 h-4 text-gray-400 dark:text-gray-500 ml-2"
                   fill="none"

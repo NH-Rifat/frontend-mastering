@@ -103,9 +103,9 @@ body {
   --font-montserrat: var(--font-montserrat);
   --font-openSans: var(--font-openSans);
   /* color theme */
-  --color-primary: #5f2ded;
-  --color-secondary: var(--color-orange-500);
-  --color-tertiary: var(--color-purple-500);
+  --color-primary: var(--color-blue-600)
+  --color-secondary: var(--color-purple-600);
+  --color-tertiary: var(--color-cyan-600);
   /* box shadow */
   --shadow-custom: 0px 0px 15px 0px rgba(204, 204, 204, 0.4);
   /* device breakpoint */

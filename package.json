@@ -17,6 +17,7 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "classnames": "^2.5.1",
     "framer-motion": "^12.23.5",
+    "lucide-react": "^0.525.0",
     "next": "15.4.1",
     "prop-types": "^15.8.1",
     "react": "19.1.0",
