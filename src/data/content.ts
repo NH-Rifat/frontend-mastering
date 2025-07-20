@@ -1,52 +1,5 @@
-export const heroStats = [
-  {
-    value: '15+',
-    label: 'Concepts Covered',
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  { value: '10+', label: 'Live Demos', gradient: 'from-blue-500 to-cyan-500' },
-  {
-    value: '100%',
-    label: 'Open Source',
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  {
-    value: 'TypeScript',
-    label: 'Type Safe',
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-];
-
-export const features = [
-  {
-    icon: '🚀',
-    title: 'Performance First',
-    description:
-      'Every implementation is optimized for real-world performance with benchmarks and best practices.',
-    gradient: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: '🎯',
-    title: 'Production Ready',
-    description:
-      'Copy-paste code that works in production environments with proper error handling.',
-    gradient: 'from-green-500 to-emerald-500',
-  },
-  {
-    icon: '📚',
-    title: 'Learn by Doing',
-    description:
-      'Interactive examples and live demos help you understand concepts through practice.',
-    gradient: 'from-purple-500 to-pink-500',
-  },
-  {
-    icon: '🔧',
-    title: 'Modern Tools',
-    description:
-      'Built with the latest technologies including Next.js 15, TypeScript, and Tailwind CSS.',
-    gradient: 'from-orange-500 to-red-500',
-  },
-];
+// Note: heroStats has been moved to @/utils/data/hero.ts for better organization
+// Note: features has been moved to @/app/(Home)/_components/Features/utils/data.ts for better organization
 
 export const testimonials = [
   {

@@ -103,7 +103,7 @@ body {
   --font-montserrat: var(--font-montserrat);
   --font-openSans: var(--font-openSans);
   /* color theme */
-  --color-primary: var(--color-blue-600)
+  --color-primary: var(--color-blue-600);
   --color-secondary: var(--color-purple-600);
   --color-tertiary: var(--color-cyan-600);
   /* box shadow */
