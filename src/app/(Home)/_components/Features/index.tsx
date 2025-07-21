@@ -1,8 +1,10 @@
 import { FadeIn } from '@/components/animations';
-import { FeaturesBackground } from './_components/FeaturesBackground';
-import { FeaturesGrid } from './_components/FeaturesGrid';
-import { FeaturesHeaderContent } from './_components/FeaturesHeaderContent';
-import { FeaturesHeaderIcon } from './_components/FeaturesHeaderIcon';
+import {
+  FeaturesBackground,
+  FeaturesGrid,
+  FeaturesHeaderContent,
+  FeaturesHeaderIcon,
+} from './_components';
 
 const Features = () => {
   return (

@@ -1,5 +1,4 @@
 'use client';
-
 import { heroData } from '@/app/(Home)/_components/Hero/utils/data';
 import { Badge } from '@/components/common';
 import { motion } from 'framer-motion';

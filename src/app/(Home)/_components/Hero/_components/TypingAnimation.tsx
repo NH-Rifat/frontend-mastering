@@ -1,5 +1,4 @@
 'use client';
-
 import { heroData } from '@/app/(Home)/_components/Hero/utils/data';
 import { useEffect, useState } from 'react';
 
