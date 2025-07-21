@@ -1,5 +1,3 @@
-'use client';
-
 import CTA from './_components/CTA';
 import FeaturedConcept from './_components/FeaturedConcept';
 import Features from './_components/Features';
